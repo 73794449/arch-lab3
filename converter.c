@@ -8,7 +8,7 @@ outRet convert(char *_input, DSC *table)
 {
     size_t out_count = 0;
     valRet valStruct = create_values(_input);
-    uint8_t* values = valStruct.values;
+    uint8_t *values = valStruct.values;
     size_t values_count = valStruct.count;
     uint8_t inst_i = 0;
     uint8_t insts[2];
@@ -82,6 +82,6 @@ outRet convert(char *_input, DSC *table)
     }
 
     free(values);
-    outRet ret = {out_count,result};
+    outRet ret = {out_count, result};
     return ret;
 }

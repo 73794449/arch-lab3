@@ -2,6 +2,6 @@
 #ifndef VIRTUAL_ADDR
 #define VIRTUAL_ADDR
 
-void set_vaddr(OUT *result, size_t out_c, char* for_phys);
+void set_vaddr(OUT *result, size_t out_c, char *for_phys);
 
 #endif

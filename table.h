@@ -13,6 +13,6 @@ struct descriptor
 };
 typedef struct descriptor DSC;
 
-DSC* parseTable(char* _table);
+DSC *parseTable(char *_table);
 
 #endif

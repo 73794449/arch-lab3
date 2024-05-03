@@ -33,11 +33,11 @@ void UNKNOWN(OUT *result, uint8_t *insts, size_t out_c)
 
 OUT *realloc_with_memset_zero_out(OUT *p1)
 {
-    OUT *p2 = (OUT *)malloc(SIZE_RESULT * 2*sizeof(OUT));
+    OUT *p2 = (OUT *)malloc(SIZE_RESULT * 2 * sizeof(OUT));
     if (p2 == NULL)
         exit(EXIT_FAILURE);
 
-    memset(p2, 0, SIZE_RESULT*2*sizeof(p2[0]));
+    memset(p2, 0, SIZE_RESULT * 2 * sizeof(p2[0]));
     if (p1 != NULL)
     {
         for (size_t i = 0; i < SIZE_RESULT; i++)
@@ -50,11 +50,11 @@ OUT *realloc_with_memset_zero_out(OUT *p1)
 
 uint8_t *realloc_with_memset_zero_uint8(uint8_t *p1)
 {
-    uint8_t *p2 = (uint8_t *)malloc(SIZE_VALUES * 2*sizeof(uint8_t));
+    uint8_t *p2 = (uint8_t *)malloc(SIZE_VALUES * 2 * sizeof(uint8_t));
     if (p2 == NULL)
         exit(EXIT_FAILURE);
 
-    memset(p2, 0, SIZE_VALUES*2*sizeof(p2[0]));
+    memset(p2, 0, SIZE_VALUES * 2 * sizeof(p2[0]));
     if (p1 != NULL)
     {
         for (size_t i = 0; i < SIZE_VALUES; i++)

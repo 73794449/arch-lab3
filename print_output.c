@@ -1,8 +1,8 @@
 #include "outputting.h"
 
-void printOut(size_t out_count, OUT* converted)
+void printOut(size_t out_count, OUT *converted)
 {
-        printf("Results output created\n");
+    printf("Results output created\n");
     printf("----------------------\n");
     for (size_t i = 0; i < out_count; i++)
     {
@@ -55,9 +55,7 @@ void printOut(size_t out_count, OUT* converted)
             if (converted[i].ARGS.hasAddr)
             {
                 if (converted[i].ARGS.hasReg1)
-                {
                     printf(", ");
-                }
                 printf("[0x%" PRIx32 "]", converted[i].ARGS.addr);
             }
             printf("\n");

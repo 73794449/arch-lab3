@@ -9,7 +9,7 @@
 struct verify_return
 {
     bool got_error;
-    char* error[DEEP];
+    char *error[DEEP];
     size_t error_count;
 };
 typedef struct verify_return verifyRet;

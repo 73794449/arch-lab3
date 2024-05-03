@@ -10,33 +10,24 @@ char *checkPhysAddr(char *for_phys, DSC *table)
 
     if (num_of_d < RDT)
     {
-        if(table[num_of_d].segment_size != 0){
-        if (table[num_of_d].in_memory)
+        if (table[num_of_d].segment_size != 0)
         {
-            uint32_t physical = table[num_of_d].base_addr + offset;
-            if (physical < table[num_of_d].base_addr + table[num_of_d].segment_size)
+            if (table[num_of_d].in_memory)
             {
-                return "";
+                uint32_t physical = table[num_of_d].base_addr + offset;
+                if (physical < table[num_of_d].base_addr + table[num_of_d].segment_size)
+                    return "";
+                else
+                    return "Out of segment";
             }
             else
-            {
-                return "Out of segment";
-            }
+                return "Flag not in memory";
         }
         else
-        {
-            return "Flag not in memory";
-        }
-        }
-        else
-        {
             return "Segment does not exist";
-        }
     }
     else
-    {
         return "Number of segment > RDT";
-    }
 }
 
 uint32_t getPhysAddr(char *for_phys, DSC *table)

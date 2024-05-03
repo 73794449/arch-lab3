@@ -31,19 +31,24 @@ bool proc_cli(int argc, char *argv[], Files *my_files)
 {
     for (int i = 1; i < argc; i++)
     {
-        if (strcmp(argv[i], "-i") == 0){
+        if (strcmp(argv[i], "-i") == 0)
+        {
             chck(_input);
         }
-        if (strcmp(argv[i], "-o") == 0){
+        if (strcmp(argv[i], "-o") == 0)
+        {
             chck(_output);
         }
-        if (strcmp(argv[i], "-t") == 0){
+        if (strcmp(argv[i], "-t") == 0)
+        {
             chck(_table);
         }
-        if (strcmp(argv[i], "-v") == 0){
+        if (strcmp(argv[i], "-v") == 0)
+        {
             chck(_verify);
         }
-        if (strcmp(argv[i], "-q") == 0){
+        if (strcmp(argv[i], "-q") == 0)
+        {
             my_files->verbose = false;
         }
         if (strcmp(argv[i], "-h") == 0)
@@ -53,19 +58,24 @@ bool proc_cli(int argc, char *argv[], Files *my_files)
                 return false;
         }
 
-        if (strcmp(argv[i], "--input") == 0){
+        if (strcmp(argv[i], "--input") == 0)
+        {
             chck(_input);
         }
-        if (strcmp(argv[i], "--output") == 0){
+        if (strcmp(argv[i], "--output") == 0)
+        {
             chck(_output);
         }
-        if (strcmp(argv[i], "--table") == 0){
+        if (strcmp(argv[i], "--table") == 0)
+        {
             chck(_table);
         }
-        if (strcmp(argv[i], "--verify") == 0){
+        if (strcmp(argv[i], "--verify") == 0)
+        {
             chck(_verify);
         }
-        if (strcmp(argv[i], "--quiet") == 0){
+        if (strcmp(argv[i], "--quiet") == 0)
+        {
             my_files->verbose = false;
         }
         if (strcmp(argv[i], "--help") == 0)

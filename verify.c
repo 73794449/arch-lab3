@@ -46,7 +46,8 @@ void cleanCom(FILE *read_output, FILE *read_verify)
             } while (c != EOF && c != ';');
             c = (char)getc(read_output);
             update_row_col(true);
-            if (c == '\n'){
+            if (c == '\n')
+            {
                 c = (char)getc(read_output);
                 update_row_col(true);
             }
@@ -60,7 +61,8 @@ void cleanCom(FILE *read_output, FILE *read_verify)
             } while (d != EOF && d != ';');
             d = (char)getc(read_verify);
             update_row_col(false);
-            if (d == '\n'){
+            if (d == '\n')
+            {
                 d = (char)getc(read_verify);
                 update_row_col(false);
             }

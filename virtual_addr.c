@@ -1,15 +1,17 @@
 #include "virtual_addr.h"
 #include <stdlib.h>
-void set_vaddr(OUT *result, size_t out_c, char* for_phys)
+void set_vaddr(OUT *result, size_t out_c, char *for_phys)
 {
-    result[out_c].ARGS.vaddr = malloc(13*sizeof(char));
+    result[out_c].ARGS.vaddr = malloc(13 * sizeof(char));
     size_t k = 0;
     size_t space = 0;
-    for(size_t i = 0; i < 12; i++){
-        if(space != 2){
-        result[out_c].ARGS.vaddr[i] = for_phys[k];
-        k++;
-        space++;
+    for (size_t i = 0; i < 12; i++)
+    {
+        if (space != 2)
+        {
+            result[out_c].ARGS.vaddr[i] = for_phys[k];
+            k++;
+            space++;
         }
         else
         {
