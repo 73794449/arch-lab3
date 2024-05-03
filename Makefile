@@ -76,6 +76,3 @@ $(EXECUTABLE): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(EXECUTABLE)
-
-cleanwin:
-	del $(OBJ) $(EXECUTABLE)
