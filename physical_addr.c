@@ -1,9 +1,9 @@
 #include "physical_addr.h"
-
+#include <stdlib.h>
 
 char *checkPhysAddr(char *for_phys, DSC *table)
 {
-    uint32_t number = (uint32_t)strtol(for_phys, NULL, 16);
+    uint32_t number = (uint32_t)strtoll(for_phys, NULL, 16);
     uint16_t num_of_d = (uint16_t)(number >> 21);
     uint32_t mask = 0x1fffff;
     uint32_t offset = (number & mask);
@@ -41,7 +41,7 @@ char *checkPhysAddr(char *for_phys, DSC *table)
 
 uint32_t getPhysAddr(char *for_phys, DSC *table)
 {
-    uint32_t number = (uint32_t)strtol(for_phys, NULL, 16);
+    uint32_t number = (uint32_t)strtoll(for_phys, NULL, 16);
     uint16_t num_of_d = (uint16_t)(number >> 21);
     uint32_t mask = 0x1fffff;
     uint32_t offset = (number & mask);
