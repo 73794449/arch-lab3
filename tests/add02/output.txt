@@ -1,0 +1,18 @@
+02 05 01 E0 00 64 
+ADD R5, [0x10000063]
+02 0f 01 E0 00 C9 
+ADD R15, [0x100000c8]
+02 0f 01 E0 01 91 
+Out of segment
+02 
+Missing 0 after 02 in ADD REG, ADDR
+50 
+Unknown instruction
+E0 
+Unknown instruction
+06 
+Unknown instruction
+02 07 00 A0 00 09 
+Flag not in memory
+02 03 02 80 20 09 
+Segment does not exist

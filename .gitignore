@@ -2,3 +2,5 @@
 .vscode/*
 .vscode/
 *.o
+outDebug.exe
+*.exe

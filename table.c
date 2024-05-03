@@ -20,7 +20,7 @@ DSC* parseTable(char* _table)
     {
         fgets(row, MAXCHAR, reader);
         token  = strtok(row, "|");
-        size_t id = atoi(token);
+        size_t id = (size_t)atoi(token);
         size_t parse = 0;
         while(token != NULL)
         {
@@ -28,13 +28,13 @@ DSC* parseTable(char* _table)
             switch(parse)
             {
                 case 0:
-                    Table[id].base_addr = strtoull(token, NULL, 0);
+                    Table[id].base_addr = (uint32_t)strtoul(token, NULL, 0);
                     break;
                 case 1:
-                    Table[id].segment_size = atoi(token);
+                    Table[id].segment_size = (uint16_t)atoi(token);
                     break;
                 case 2:
-                    Table[id].in_memory = atoi(token);
+                    Table[id].in_memory = (bool)atoi(token);
                     break;
                 default:
                     break;
@@ -42,6 +42,6 @@ DSC* parseTable(char* _table)
             parse++;
         }
     }
-
+    fclose(reader);
     return Table;
 }

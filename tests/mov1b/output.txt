@@ -1,0 +1,18 @@
+1b 05 01 E0 00 64 
+MOV R5, [0x10000063]
+1b 0f 01 E0 00 C9 
+MOV R15, [0x100000c8]
+1b 0f 01 E0 01 91 
+Out of segment
+1b 
+Missing 0 after 1B in MOV REG, ADDR
+50 
+Unknown instruction
+E0 
+Unknown instruction
+06 
+Unknown instruction
+1b 07 00 A0 00 09 
+Flag not in memory
+1b 03 02 80 20 09 
+Segment does not exist

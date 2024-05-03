@@ -1,0 +1,22 @@
+1C 23 33 22 11 ff 
+MOV R3, 332211ffh
+1C 2f ff ff ff ff 
+MOV R15, 0ffffffffh
+1C 
+Missing 2 after 1C in MOV REG, LIT32
+ff 
+Unknown instruction
+ff 
+Unknown instruction
+ff 
+Unknown instruction
+1f 
+Unknown instruction
+ff 
+Unknown instruction
+ff 
+Unknown instruction
+ff 
+Unknown instruction
+1C 24 33 22 11 00 
+MOV R4, 33221100h

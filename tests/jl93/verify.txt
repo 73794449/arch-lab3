@@ -1,0 +1,10 @@
+93 01 E0 00 64 
+JL [0x10000063]
+93 01 E0 00 C9 
+JL [0x100000c8]
+93 01 E0 01 91 
+Out of segment
+93 00 A0 00 09 
+Flag not in memory
+93 02 80 20 09 
+Segment does not exist

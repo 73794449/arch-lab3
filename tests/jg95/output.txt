@@ -1,0 +1,10 @@
+95 01 E0 00 64 
+JG [0x10000063]
+95 01 E0 00 C9 
+JG [0x100000c8]
+95 01 E0 01 91 
+Out of segment
+95 00 A0 00 09 
+Flag not in memory
+95 02 80 20 09 
+Segment does not exist
